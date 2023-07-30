@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Firebase Chat</string>
+	<string>Chat ON</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -47,5 +47,18 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleTypeRole</key>
+            <string>Editor</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <!-- TODO Replace this value: -->
+                <!-- Copied from GoogleService-Info.plist key REVERSED_CLIENT_ID -->
+                <string>com.googleusercontent.apps.1057055965965-qrir1m53qcf8ahmhqqdrjdj9uuclc9kn</string>
+            </array>
+        </dict>
+ </array>
 </dict>
 </plist>

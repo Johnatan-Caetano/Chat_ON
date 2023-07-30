@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_chat/common/services/services.dart';
-import 'package:firebase_chat/common/values/values.dart';
+import 'package:ChatON/common/services/services.dart';
+import 'package:ChatON/common/values/values.dart';
 import 'package:get/get.dart';
 import 'package:package_info/package_info.dart';
 

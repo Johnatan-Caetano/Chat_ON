@@ -3,9 +3,9 @@ import 'dart:async';
 import 'package:cookie_jar/cookie_jar.dart';
 import 'package:dio/dio.dart';
 import 'package:dio_cookie_manager/dio_cookie_manager.dart';
-import 'package:firebase_chat/common/store/store.dart';
-import 'package:firebase_chat/common/utils/utils.dart';
-import 'package:firebase_chat/common/values/values.dart';
+import 'package:ChatON/common/store/store.dart';
+import 'package:ChatON/common/utils/utils.dart';
+import 'package:ChatON/common/values/values.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart' hide FormData;
 

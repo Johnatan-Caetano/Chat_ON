@@ -1,7 +1,7 @@
 import 'dart:convert';
-import 'package:firebase_chat/common/entities/entities.dart';
-import 'package:firebase_chat/common/services/services.dart';
-import 'package:firebase_chat/common/values/values.dart';
+import 'package:ChatON/common/entities/entities.dart';
+import 'package:ChatON/common/services/services.dart';
+import 'package:ChatON/common/values/values.dart';
 import 'package:get/get.dart';
 
 class UserStore extends GetxController {
