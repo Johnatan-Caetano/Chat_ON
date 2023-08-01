@@ -40,7 +40,7 @@ class ApplicationController extends GetxController{
         color: AppColors.thirdElementText),
         activeIcon: Icon(
           Icons.message,
-          color: Colors.red
+          color: Color(0xFF73022C),
         ),
         label: 'Conversas',
         backgroundColor: AppColors.primaryBackground
@@ -51,7 +51,7 @@ class ApplicationController extends GetxController{
         color: AppColors.thirdElementText),
         activeIcon: Icon(
           Icons.contact_page,
-          color: Colors.red
+          color: Color(0xFF73022C),
         ),
         label: 'Contatos',
         backgroundColor: AppColors.primaryBackground
@@ -62,7 +62,7 @@ class ApplicationController extends GetxController{
         color: AppColors.thirdElementText),
         activeIcon: Icon(
           Icons.settings,
-          color: Colors.red
+          color: Color(0xFF73022C),
         ),
         label: 'Configurações',
         backgroundColor: AppColors.primaryBackground

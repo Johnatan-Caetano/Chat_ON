@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:ChatON/common/middlewares/middlewares.dart';
 
 import 'package:ChatON/pages/application/index.dart';
+import 'package:ChatON/pages/contact/index.dart';
 import 'package:ChatON/pages/sign_in/index.dart';
 import 'package:ChatON/pages/welcome/index.dart';
 
@@ -20,9 +21,9 @@ class AppPages {
       name: AppRoutes.INITIAL,
       page: () => WelcomePage(),
       binding: WelcomeBinding(),
-      // middlewares: [
-      //   RouteWelcomeMiddleware(priority: 1)
-      // ]
+      middlewares: [
+        RouteWelcomeMiddleware(priority: 1)
+      ]
     ),
  
     GetPage(
@@ -40,11 +41,12 @@ class AppPages {
         //RouteAuthMiddleware(priority: 1),
       ],
     ),
- /*
-    // 最新路由
-    // 首页
-    GetPage(name: AppRoutes.Contact, page: () => ContactPage(), binding: ContactBinding()),
+ 
+    GetPage(name: AppRoutes.Contact, 
+      page: () => ContactPage(), 
+      binding: ContactBinding()),
     //消息
+ /*
     GetPage(name: AppRoutes.Message, page: () => MessagePage(), binding: MessageBinding()),
     //我的
     GetPage(name: AppRoutes.Me, page: () => MePage(), binding: MeBinding()),

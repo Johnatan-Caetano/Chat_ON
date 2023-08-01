@@ -122,7 +122,7 @@ WelcomePage({Key? key}): super(key: key);
                         ElevatedButton(
                           onPressed: () => controller.handleSignIn(),
                           style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all(Colors.red),
+                            backgroundColor: MaterialStateProperty.all(Color(0xFF73022C)),
                             foregroundColor: MaterialStateProperty.all(Colors.white),
                             shape: MaterialStateProperty.all(
                               RoundedRectangleBorder(

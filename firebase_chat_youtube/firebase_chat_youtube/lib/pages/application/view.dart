@@ -1,4 +1,5 @@
 import 'package:ChatON/common/widgets/button.dart';
+import 'package:ChatON/pages/contact/index.dart';
 import 'package:ChatON/pages/sign_in/controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +24,7 @@ const ApplicationPage({Key? key}): super(key: key);
         onPageChanged: controller.handlePageChanged,
         children: [
           Center(child: Text('Conversas'),),
-          Center(child: Text('Contatos'),),
+          ContactPage(),
           Center(child: Text('Configurações'),)
         ],
       );
@@ -37,7 +38,7 @@ const ApplicationPage({Key? key}): super(key: key);
       showUnselectedLabels: true,
       showSelectedLabels: true,
       unselectedItemColor: AppColors.tabBarElement,
-      selectedItemColor: Colors.red,
+      selectedItemColor: Color(0xFF73022C),
       ));
     }
     return Scaffold(
