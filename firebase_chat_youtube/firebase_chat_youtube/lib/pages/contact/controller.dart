@@ -21,14 +21,15 @@ class ContactController extends GetxController{
   goChat(UserData to_userdata)async{
 
    var from_messages = await db.collection("message").withConverter(
-      fromFirestore: Msg.fromFirestore,
-      toFirestore: (Msg msg, options)=> msg.toFirestore()).where("from_uid", isEqualTo: token).where(
-        "to_uid", isEqualTo: to_userdata.id).get();
+    fromFirestore: Msg.fromFirestore,
+    toFirestore: (Msg msg, options) => msg.toFirestore()).where("from_uid", isEqualTo: token)
+    .where("to_uid", isEqualTo: to_userdata.id).get();
 
     var to_messages = await db.collection("message").withConverter(
-      fromFirestore: Msg.fromFirestore,
-      toFirestore: (Msg msg, options)=> msg.toFirestore()).where("from_uid", isEqualTo: to_userdata.id).where(
-        "from_uid", isEqualTo: to_userdata.id).where("to_uid", isEqualTo: token).get();
+        fromFirestore: Msg.fromFirestore,
+        toFirestore: (Msg msg, options) => msg.toFirestore()).where("from_uid", isEqualTo: to_userdata.id)
+        .where("to_uid", isEqualTo: token).get();
+
 
     if(from_messages.docs.isEmpty && to_messages.docs.isEmpty){
       String profile = await UserStore.to.getProfile();
