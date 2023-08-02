@@ -6,6 +6,8 @@ import 'package:ChatON/pages/application/index.dart';
 import 'package:ChatON/pages/contact/index.dart';
 import 'package:ChatON/pages/sign_in/index.dart';
 import 'package:ChatON/pages/welcome/index.dart';
+import '../../pages/chat/bindings.dart';
+import '../../pages/chat/view.dart';
 
 import 'package:get/get.dart';
 import 'routes.dart';
@@ -46,12 +48,16 @@ class AppPages {
       page: () => ContactPage(), 
       binding: ContactBinding()),
     //消息
+   
+    GetPage(name: AppRoutes.Chat,
+      page: () => ChatPage(), 
+      binding: ChatBinding()),
+ 
  /*
     GetPage(name: AppRoutes.Message, page: () => MessagePage(), binding: MessageBinding()),
     //我的
     GetPage(name: AppRoutes.Me, page: () => MePage(), binding: MeBinding()),
     //聊天详情
-    GetPage(name: AppRoutes.Chat, page: () => ChatPage(), binding: ChatBinding()),
 
     GetPage(name: AppRoutes.Photoimgview, page: () => PhotoImgViewPage(), binding: PhotoImgViewBinding()),*/
   ];
