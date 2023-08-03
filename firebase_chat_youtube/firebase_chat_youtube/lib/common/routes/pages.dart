@@ -6,8 +6,7 @@ import 'package:ChatON/pages/application/index.dart';
 import 'package:ChatON/pages/contact/index.dart';
 import 'package:ChatON/pages/sign_in/index.dart';
 import 'package:ChatON/pages/welcome/index.dart';
-import '../../pages/chat/bindings.dart';
-import '../../pages/chat/view.dart';
+import '../../pages/message/chat/index.dart';
 
 import 'package:get/get.dart';
 import 'routes.dart';

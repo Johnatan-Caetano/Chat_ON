@@ -1,18 +1,16 @@
-import 'package:ChatON/pages/chat/controller.dart';
+import 'package:ChatON/pages/message/chat/controller.dart';
+import 'package:ChatON/pages/message/chat/widgets/chat_list.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
-import '../../common/values/colors.dart';
+import '../../../common/values/colors.dart';
 
 
 class ChatPage extends GetView<ChatController> {
 const ChatPage({Key? key}): super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
 
     AppBar _buildAppBar(){
       return AppBar(
@@ -100,6 +98,42 @@ const ChatPage({Key? key}): super(key: key);
         ),
       );
     }
+  
+    void _showPicker(context){
+      showModalBottomSheet(
+        context: context, 
+        builder: (BuildContext bc){
+          return SafeArea(
+            child: Wrap(
+              children: [
+                ListTile(
+                  leading: Icon(Icons.photo_library),
+                  title: Text(
+                    "Galeria"
+                  ),
+                  onTap: (){
+                    
+                  },
+                ),
+                ListTile(
+                  leading: Icon(Icons.photo_camera),
+                  title: Text(
+                    "Câmera"
+                  ),
+                  onTap: (){
+                    
+                  },
+                )
+              ],
+            ) 
+          );
+        }
+      );
+    }
+
+  @override
+  Widget build(BuildContext context) {
+
 
     return Scaffold(
       appBar: _buildAppBar(),
@@ -108,6 +142,9 @@ const ChatPage({Key? key}): super(key: key);
           constraints: BoxConstraints.expand(),
           child: Stack(
             children: [
+
+              ChatList(),
+
               Positioned(
                 bottom: 0.h,
                 height: 50.h,
@@ -164,7 +201,7 @@ const ChatPage({Key? key}): super(key: key);
                             color: Color(0xFF73022C),
                           ),
                           onTap: (){
-
+                            _showPicker(context);
                           },
                         ),
                       ),

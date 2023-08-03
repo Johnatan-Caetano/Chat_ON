@@ -1,4 +1,4 @@
-import 'package:ChatON/pages/chat/controller.dart';
+import 'package:ChatON/pages/message/chat/controller.dart';
 import 'package:get/get.dart';
 
 class ChatBinding implements Bindings{

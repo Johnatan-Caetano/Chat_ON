@@ -1,5 +1,7 @@
-import 'package:ChatON/common/entities/entities.dart';
+
 import 'package:get/get.dart';
+
+import '../../../common/entities/msgcontent.dart';
 
 class ChatState{
   RxList<Msgcontent> msgcontentList = <Msgcontent>[].obs;
