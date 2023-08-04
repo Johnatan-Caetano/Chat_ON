@@ -1,13 +1,14 @@
-import 'dart:html';
+import 'dart:io';
 import 'package:ChatON/common/utils/security.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:ChatON/common/entities/entities.dart';
-import 'package:ChatON/pages/message/chat/index.dart';
-import 'package:flutter/material.dart';
+import 'package:ChatON/common/store/store.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import '../../../common/entities/msgcontent.dart';
+import 'index.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-
-import '../../../common/store/user.dart';
+import 'package:path/path.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 
 
 
@@ -22,31 +23,31 @@ class ChatController extends GetxController{
   final db = FirebaseFirestore.instance;
   var listener;
 
-  // File? _photo;
-  // final ImagePicker _piker = ImagePicker();
+  File? _photo;
+  final ImagePicker _piker = ImagePicker();
 
-  // Future imgFromGallery()async{
+  Future imgFromGallery()async{
     
-  //   final pickedFile = await _piker.pickImage(source: ImageSource.gallery);
-  //   if(pickedFile != null){
-  //     _photo = File(pickedFile.path);
-  //     uploadFile();
-  //   }else{
-  //     print("Nenhuma imagem selecionada");
-  //   }
-  // }
+    final pickedFile = await _piker.pickImage(source: ImageSource.gallery);
+    if(pickedFile != null){
+      _photo = File(pickedFile.path);
+      uploadFile();
+    }else{
+      print("Nenhuma imagem selecionada");
+    }
+  }
 
-  // Future uploadFile(){
-  //   if(_photo == null) return;
-  //   final fileName = getRandomString(15)+extension(_photo!.path);
-  //   try{
+  Future uploadFile()async{
+    if(_photo == null) return;
+    final fileName = getRandomString(15)+ extension (_photo!.path);
+    try{
 
-  //     final ref = FirebaseStorage.instance.ref("chat").child(fileName);
+      final ref = FirebaseStorage.instance.ref("chat").child(fileName);
 
-  //   }catch(e){
-  //     print("There's an error $e");
-  //   }
-  // }
+    }catch(e){
+      print("There's an error $e");
+    }
+  }
 
   @override
   void onInit(){
@@ -120,5 +121,6 @@ class ChatController extends GetxController{
     listener.cancel();
     super.dispose();
   }
+  
 
 }
